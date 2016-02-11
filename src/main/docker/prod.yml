@@ -1,0 +1,18 @@
+turbo-elasticsearch:
+  container_name: turbo-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/Turbo/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+turbo-postgresql:
+  container_name: turbo-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/Turbo/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=Turbo
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"

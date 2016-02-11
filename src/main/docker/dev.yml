@@ -1,0 +1,10 @@
+turbo-dev-postgresql:
+  container_name: turbo-dev-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/Turbo/dev-postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=Turbo
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
